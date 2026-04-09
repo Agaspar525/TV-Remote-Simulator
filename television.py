@@ -36,7 +36,7 @@ class Television:
                 self.__channel -= 1
             else:
                 self.__channel = Television.MAX_CHANNEL
-
+    # Method to decrease the tv channel
     def volume_up(self):
         if self.__status:
             if self.__muted:
@@ -50,7 +50,7 @@ class Television:
                 self.__muted = False
             elif self.__volume > Television.MIN_VOLUME:
                 self.__volume -= 1
-
+    #Method to show the tv status. Return: Tv status
     def __str__(self):
         if self.__muted:
             return f"Power = {self.__status}, Channel = {self.__channel}, Volume = {Television.MIN_VOLUME}"
